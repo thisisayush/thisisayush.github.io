@@ -1,0 +1,72 @@
+<!--
+    Identity: A Personal One Page Identity Template
+    Open Source and Free to Use
+    Author: Ayush Agarwal (http://thisisayush.com)
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Identity | A Personal One-Page Identity Template</title>
+        <!-- Meta Tags -->
+        <link rel="icon" type="image/png" href="favicon.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- SEO -->
+        <meta name="keywords" content="Single Page Template, HTML5 Template, CSS Template, Personal Identity Template, Personal Portfolio Template" />
+        <meta name="description" content="A single page Personal Identity Template written smoothly in CSS, HTML5 and JS." />
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/main.css" />
+    </head>
+    <body>
+        <div id="loader">
+            <div class="spinner absolute-center">
+                <span class="fa fa-circle-o-notch fa-spin fa-2x"></span>
+            </div>
+        </div>
+        <div id="grab_on_github" style="position:fixed;top:5px;right:0;padding:4px;background:rgba(255,255,255,0.4);z-index:9999;">
+            <a href="https://github.com/thisisayush/identity">Grab it on <i class="fa fa-github"></i></a>
+        </div>
+        <div id="wrapper">
+            <section id="main" class="block-center">
+                <header>
+                    <span class="avatar block-center">
+                        <img src="images/avatar.svg" alt="Avatar"/>
+                    </span>
+                    <h1>Lorem Ipsum</h1>
+                    <p id="post">UI/UX Designer</p>
+                </header>
+                <footer>
+                    <ul class="icons">
+                        <li>
+                            <a href="#" class="fa fa-twitter"></a>
+                        </li>
+                        <li>
+                            <a href="#" class="fa fa-instagram"></a>
+                        </li>
+                        <li>
+                            <a href="#" class="fa fa-facebook"></a>
+                        </li>
+                    </ul>
+                </footer>
+            </section>
+            <footer id="footer">
+                <p>Design by <a href="http://thisisayush.com" target="_blank" title="Ayush Agarwal">Ayush Agarwal</a> | 2017</p>
+            </footer>
+        </div>
+        <script>
+            window.onload = function(){
+                var i = 0;
+                var post = ["Donec ultrices","Praesent scelerisque","Donec accumsan"];
+                setTimeout(function(){
+                    document.getElementById("loader").remove();
+                },2000);
+                setInterval(function(){
+                    if(i>=post.length)
+                        i = 0;
+                    var el = document.getElementById("post");
+                    el.innerHTML = post[i];
+                    i++;
+                },2000);
+            }
+        </script>
+    </body>
+</html>
